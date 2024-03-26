@@ -3,8 +3,8 @@ from torch import nn
 from torch.nn import functional as F
 from decoder import VAE_AttentionBlock, VAE_ResidualBlock
 
-# 이미지를 가져와 넣으면 매우 
-class VAE_encoder(nn.Sequential):
+# 이미지를 가져와 넣으면 작은 사이즈로 변환시켜줌.
+class VAE_Encoder(nn.Sequential):
   def __init__(self):
     super.__init__(
       # (batch_size, channel, h, w) -> (b, 128, h, w)
