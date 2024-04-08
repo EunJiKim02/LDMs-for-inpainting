@@ -1,0 +1,5 @@
+ldm/last.ckpt
+data/*
+logs/*
+output/*
+**/__pycache__/
