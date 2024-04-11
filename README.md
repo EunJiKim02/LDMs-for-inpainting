@@ -37,8 +37,13 @@ conda activate ldm
 - 아직 update안한 library
 
 ```python
-pip install blobfile
-pip install easydict
+pip install blobfile==2.1.1
+pip install easydict==1.13
+```
+
+### 기존 pre-trained model download
+```python
+wget -O ldm/origin.ckpt https://heibox.uni-heidelberg.de/f/4d9ac7ea40c64582b7c9/?dl=1
 ```
 
 ### Dataset 준비

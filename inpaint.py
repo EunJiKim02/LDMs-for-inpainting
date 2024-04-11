@@ -58,7 +58,7 @@ if __name__ == "__main__":
 
     config = OmegaConf.load("ldm/configs/inpainting/inpainting_big.yaml")
     model = instantiate_from_config(config.model)
-    model.load_state_dict(torch.load("ldm/last.ckpt")["state_dict"],
+    model.load_state_dict(torch.load("ldm/origin.ckpt")["state_dict"],
                           strict=False)
 
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
