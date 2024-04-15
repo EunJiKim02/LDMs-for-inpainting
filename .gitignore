@@ -3,3 +3,4 @@ data/*
 logs/*
 output/*
 **/__pycache__/
+archive/*

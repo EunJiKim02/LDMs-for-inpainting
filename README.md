@@ -47,14 +47,17 @@ pip install easydict
 
 ```python
 #python scripts/get_mask_dataset.py --config [GEN_MASK_CONFIG] --indir [INPUT IMAGE DIR] --outdir [OUTPUT DIR]
-python scripts/gen_mask_dataset.py --config scripts/gen_mask_config/random_medium.yaml --indir data/churches_train/ --outdir data/churches_mask 
+
+python scripts/gen_mask_dataset.py --config scripts/gen_mask_config/random_medium.yaml --indir data/stanford_dog/train/ --outdir data/stanford_dog_mask/train/ 
+python scripts/gen_mask_dataset.py --config scripts/gen_mask_config/random_medium.yaml --indir data/stanford_dog/val/ --outdir data/stanford_dog_mask/val/ 
 ```
 
 2. csv 생성
 
 ```python
 # python scripts/generate_csv.py --llama_masked_outdir [MASK DIR] --csv_out_path [CSV PATH(.csv)]
-python scripts/generate_csv.py --llama_masked_outdir data/churches_mask/ --csv_out_path data/churches_mask.csv
+python scripts/generate_csv.py --llama_masked_outdir data/stanford_dog_mask/train --csv_out_path data/stanford_dog_mask/stanford_dog_mask_train.csv
+python scripts/generate_csv.py --llama_masked_outdir data/stanford_dog_mask/val --csv_out_path data/stanford_dog_mask/stanford_dog_mask_val.csv
 ```
 
 ### 실행 방법 (Model Training)
