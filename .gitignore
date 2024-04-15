@@ -1,6 +1,9 @@
 ldm/last.ckpt
 data/*
 logs/*
+test/*
 output/*
+*.pyc
+*.ckpt
 **/__pycache__/
 archive/*
